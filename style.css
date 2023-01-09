@@ -1,0 +1,147 @@
+:root {
+    --dc: hsl(185, 75%, 39%);
+    --vddb: hsl(229, 23%, 23%);
+    --dgb: hsl(227, 10%, 46%);
+    --dg: hsl(0, 0%, 59%);
+}
+
+@font-face {
+    font-family: KumbhSans;
+    src: url("./fonts/KumbhSans-VariableFont_wght.ttf");
+}
+
+*{
+    box-sizing: border-box;
+    font-family: KumbhSans;
+}
+
+body{
+    margin: 0; padding: 0;
+    position: relative;
+    height: 100vh;
+    background-color: var(--dc);
+    font-size: 18px;
+}
+
+.bg-pattern-top {
+    background-image: url("./images/bg-pattern-top.svg");
+    position: absolute;
+    background-position: bottom right;
+    top: -5%; left:-10%;
+}
+
+.item{
+    width: 40%;
+    height: 50%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-pattern-bottom {
+    background-image: url("./images/bg-pattern-bottom.svg");
+    bottom: -5%; right: -10%;
+    background-position: top left;
+}
+
+.container {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+    padding: 2em 4em;
+}
+
+footer{
+    position: fixed;
+    bottom: 0; left: 0;
+}
+
+.cardholder {
+    min-width: 400px;
+    flex-basis: 40%;
+    display:flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: white;
+    position: relative;
+}
+
+.bg-card {
+    background: url("./images/bg-pattern-card.svg") no-repeat center;
+    background-size: cover;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+
+img {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+
+.textholder {
+    flex-basis: 60%;
+    padding: 2em 3em;
+}
+
+.name {
+    font-size: 1.6em;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.name::after{
+    content: "26";
+    font-weight: 400;
+    color: var(--dgb);
+}
+
+.avatar {
+    background: url("./images/image-victor.jpg") no-repeat center;
+    width: 100px;
+    height: 100px;
+    border: 5px solid white;
+    border-radius: 50%;
+    position: absolute;
+    background-size: cover;
+    left: 50%;
+    margin-left: -50px;
+    top: 25%;
+}
+
+.info {
+    text-align: center;
+    color: var(--dg);
+    font-size: 1em;
+}
+
+ul {
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: .8em;
+    margin: 3em 0 0 0;
+    position: relative;
+
+}
+
+ul::before {
+    display: block;
+    position: absolute;
+    height: 1px;
+    background-color: var(--dg);
+    width: 120%;
+    top: -20%;
+    left: -10%;
+    content: "";
+}
+
+li:first-line{
+    color: hsl(229, 23%, 23%);
+    font-weight: 700;
+}
+
+li {
+    color:hsl(0, 0%, 59%);
+}
